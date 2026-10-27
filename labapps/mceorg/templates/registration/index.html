@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1 class="mt-5 my-5">Projects</h1>
+<ul class="list-group mt-3">
+{% for project in projects %}
+<li class="list-group-item">
+<a href="{% url 'project_student_list' project.id %}">{{ project.topic }}</a>
+</li>
+{% endfor %}
+</ul>
+</body>
+</html>
